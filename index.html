@@ -14,6 +14,12 @@
   <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
   <a-scene embedded arjs="debugUIEnabled:false;">
  
+    <!-- OBJ形式のCGモデルの読み込み -->
+    <a-assets>
+      <a-asset-item id="obj" src="se_b.obj"></a-asset-item>   <!-- objファイル -->
+      <a-asset-item id="mtl" src="se_b.mtl"></a-asset-item>   <!-- mtlファイル -->
+    </a-assets>
+
     <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
     <a-marker preset="hiro">
       
