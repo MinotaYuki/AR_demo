@@ -13,37 +13,11 @@
   <!-- <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script> -->
   
   <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
-  <a-scene embedded arjs="debugUIEnabled:false;">
- 
-    <!-- OBJ形式のCGモデルの読み込み -->
-    <a-assets>
-      <a-asset-item id="obj" src="cu_b.obj"></a-asset-item>   <!-- objファイル -->
-      <a-asset-item id="mtl" src="cu_b.mtl"></a-asset-item>   <!-- mtlファイル -->
-    </a-assets>
 
-    <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
-    <a-marker preset="hiro">
-      
-      <!-- マーカーの場所に箱を置く（見やすいようにワイヤーフレーム表示） 
-      <a-box position="0 0.5 0" wireframe="true"></a-box>　　　　-->
-
-      <a-obj-model
-      src="#obj"
-      mtl="#mtl"
-      scale="1 1 1"
-      position="0 0 0"
-      animation="property:rotation; from:0 0 0; to:0 0 0; dur:3000; easing:linear; loop:true;">
-      </a-obj-model>
-    </a-marker>
-
-    <!-- AR用のカメラを置く -->
-    <a-entity camera></a-entity>
- 
-  </a-scene>
   <a-scene ar>
-    <a-box position="5 0 -7" rotation="0 45 0" color="#4CC3D9"></a-box>
+    <a-box position="0 0 -7" rotation="0 45 0" color="#4CC3D9"></a-box>
     <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-    <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+    <a-cylinder position="0 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
   </a-scene>
  
 </body>
