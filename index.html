@@ -16,6 +16,7 @@
   <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
    <a-scene ar embedded arjs="debugUIEnabled:false;">
     <!-- OBJ形式のCGモデルの読み込み -->
+
     <a-assets>
       <!-- 3Dモデルをプリロード -->
       <a-asset-item id="testFloar" src="testFloar.glb"></a-asset-item>
@@ -23,15 +24,17 @@
 
     <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
     <a-marker preset="hiro">
-
       <a-entity 
       gltf-model="#testFloar" 
       scale="1 1 1" 
       animation-mixer></a-entity>
-
     </a-marker>
 
-  
+    <a-entity 
+      ight="color: #AFA; intensity: 1.5" 
+      position="-1 1 0">
+    </a-entity>
+
     <!-- AR用のカメラを置く -->
     <a-entity camera></a-entity>
  
