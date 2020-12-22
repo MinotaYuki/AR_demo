@@ -21,6 +21,7 @@
     <a-assets>
       <a-asset-item id="obj" src="cu_b.obj"></a-asset-item>   <!-- objファイル -->
       <a-asset-item id="mtl" src="cu_b.mtl"></a-asset-item>   <!-- mtlファイル -->
+      <a-asset-item id="glb" src="testFloar.glb"></a-asset-item>
     </a-assets>
 
     <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
@@ -28,16 +29,13 @@
       
       <!-- マーカーの場所に箱を置く（見やすいようにワイヤーフレーム表示） --> 　
 
-      <a-box width="0.25" height="0.25" depth="0.25" position="-0.25 0.125 -0.75" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 0.3125 -1.25" radius="0.3125" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="0.25 0.1875 -0.75" radius="0.125" height="0.375" color="#FFC65D"></a-cylinder>
 
 
       <a-obj-model
       src="#obj"
       mtl="#mtl"
       scale="1 1 1"
-      position="0 0 0"
+      position="1 0 0"
       animation="property:rotation; from:0 0 0; to:0 0 0; dur:3000; easing:linear; loop:true;">
       </a-obj-model>
     </a-marker>
