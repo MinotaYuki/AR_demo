@@ -13,16 +13,19 @@
   <!-- <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script> -->
   <script src="https://google-ar.github.io/three.ar.js/dist/three.ar.js"></script>
   <!-- three.ar.js 読み込み-->
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   
   <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
    <a-scene ar embedded arjs="debugUIEnabled:false;">
- 
     <!-- OBJ形式のCGモデルの読み込み -->
     <a-assets>
-      <a-asset-item id="obj" src="cu_b.obj"></a-asset-item>   <!-- objファイル -->
-      <a-asset-item id="mtl" src="cu_b.mtl"></a-asset-item>   <!-- mtlファイル -->
-      <a-asset-item id="glb" src="testFloar.glb"></a-asset-item>
+      <a-asset-item id="testFloar" src="/testFloar.gltf"></a-asset-item>
     </a-assets>
+
+    <a-entity 
+    gltf-model="#testFloar" 
+    animation-mixer >
+    </a-entity>
 
     <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
     <a-marker preset="hiro">
