@@ -23,11 +23,17 @@
     </a-assets>
 
     <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
-    <a-marker preset="hiro">
+    <a-marker type="pattern" url="pattern-IMG_5793.patt">
+
+      <a-box position="0 0.5 0" wireframe="true"></a-box>
+      
       <a-entity 
-      gltf-model="#testFloar" 
-      scale="1 1 1" 
-      animation-mixer="alternate"></a-entity>
+        gltf-model="#testFloar" 
+        scale="1 1 1" 
+        animation-mixer="alternate">
+      </a-entity>
+
+
     </a-marker>
 
     <a-entity 
